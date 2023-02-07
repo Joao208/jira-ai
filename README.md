@@ -2,41 +2,67 @@
 
 https://user-images.githubusercontent.com/59159025/217343115-2dbf1f35-11b9-46ff-bf18-eec7b9153b8c.mp4
 
-O Jira AI é um aplicativo que utiliza o modelo de linguagem ChatGPT para gerar descrições de tarefas de maneira automática no Jira.
+Jira AI is an application that uses the ChatGPT language model to automatically generate task descriptions in Jira.
 
-## Tecnologias utilizadas
+## Technologies Used
 
 Forge (Node.js)
 React
 
-### Instalação
+## Installation
 
-Para instalar o Jira AI, você precisa seguir os seguintes passos:
+To install Jira AI, you need to follow the following steps:
 
-1. Clone este repositório
-2. Instale as dependências executando `npm install`
-3. Configure as credenciais de acesso à API do Jira ([Tutorial](https://developer.atlassian.com/platform/forge/getting-started/))
-4. Exporte as envs
+1. Clone this repository
+2. Install dependencies by running `npm install`
+3. Generate your OpenAI credentials [Here](https://platform.openai.com/account/api-keys)
+4. Configure Jira API access credentials ([Tutorial](https://developer.atlassian.com/platform/forge/getting-started/))
+5. Create an app
+
+```bash
+# You will only use the `manifest.yml`
+
+# Select the Blank template
+
+forge create
+```
+
+6. Move the app's manifest to the repository
+
+```bash
+cat <your_app_name>/manifest.yml > jira-ai/manifest.yml
+```
+
+7. Export envs
 
 ```bash
 export FORGE_USER_VAR_OPEN_AI_URL=https://api.openai.com/v1
-export FORGE_USER_VAR_OPEN_AI_KEY=
+export FORGE_USER_VAR_OPEN_AI_KEY=<YOUR KEY>
 ```
 
-5. Inicie a aplicação com `npm start`
+8. Deploy the application by running
 
+```bash
+npm run deploy
 
-## Uso
+forge install
 
-Após a instalação, você pode usar o Jira AI para gerar descrições de tarefas automaticamente. Basta seguir as instruções na interface do usuário para usar o modelo de linguagem ChatGPT.
+# Choose JIRA and put in your account URL
+```
 
-## Contribuição
+9. You are now ready to use.
 
-Se você quiser contribuir para o desenvolvimento do Jira AI, siga as seguintes etapas:
+## Usage
 
-1. Crie uma branch para suas alterações
-2. Envie um pull request
+After installation, you can use Jira AI to automatically generate task descriptions. Simply follow the instructions in the user interface to use the ChatGPT language model.
 
-## Licença
+## Contribution
 
-Este projeto está licenciado sob a licença MIT. Consulte o arquivo LICENSE para obter mais informações.
+If you would like to contribute to the development of Jira AI, follow the following steps:
+
+1. Create a branch for your changes
+2. Submit a pull request
+
+## License
+
+This project is licensed under the MIT license. See the LICENSE file for more information.

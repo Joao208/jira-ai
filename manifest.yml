@@ -24,3 +24,5 @@ app:
   id: ari:cloud:ecosystem::app/e95c7606-e742-4a3a-8c07-fb560f4b9d87
   runtime:
     snapshots: false
+  licensing:
+    enabled: true
