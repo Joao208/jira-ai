@@ -27,6 +27,6 @@ modules:
     - key: main
       handler: index.run
 app:
-  id: ari:cloud:ecosystem::app/39840004-5cf9-4408-b4b8-d1f18799df87
+  id: ari:cloud:ecosystem::app/e95c7606-e742-4a3a-8c07-fb560f4b9d87
   runtime:
     snapshots: false
