@@ -30,7 +30,7 @@ export const generateDescription = async ({
 
     const bodyInJSON = JSON.stringify({
       n: 1,
-      max_tokens: 1500,
+      max_tokens: 1000,
       prompt,
       temperature: 0.5,
       top_p: 1,

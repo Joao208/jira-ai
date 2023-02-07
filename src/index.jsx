@@ -18,12 +18,15 @@ import { generateDescription } from "./utils/generateDescription";
 import { reGenerateDescription } from "./utils/reGenerateDescription";
 import { Description } from "./components/description";
 import { editDescription } from "./utils/editDescription";
+import { storage } from "@forge/api";
 
 const App = () => {
   const context = useProductContext();
 
   const [error, setError] = useState("");
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState(
+    "Pode levar um tempo para as respostas serem geradas."
+  );
 
   // @ts-ignore
   const issueKey = context.platformContext.issueKey;
@@ -73,10 +76,20 @@ const App = () => {
     setError(response.message);
   };
 
+  const onSubmitClear = async () => {
+    const storageKey = "generatedDescription" + issueKey + issueId;
+
+    await storage.set(storageKey, "Descrição limpa");
+
+    setError("");
+    setMessage("");
+    setDescriptionGenerated("");
+  };
+
   return (
     <Fragment>
       {message ? (
-        <SectionMessage title="Info" appearance="info">
+        <SectionMessage title="Notion AI Info" appearance="info">
           <Text>{message}</Text>
         </SectionMessage>
       ) : null}
@@ -89,12 +102,17 @@ const App = () => {
         <TextField
           name="context-for-description"
           label="Você gostaria de dar mais contexto para melhorar a descrição?"
-          placeholder="Ex: A task consiste em criar um bot para o slack que faça tal coisa."
+          placeholder="Ex: O endpoint é /users."
         />
       </Form>
       <Button
         text="Usar essa descrição"
         onClick={onSubmitChangeDescription}
+        appearance="primary"
+      />
+      <Button
+        text="Limpar descrição gerada"
+        onClick={onSubmitClear}
         appearance="primary"
       />
     </Fragment>

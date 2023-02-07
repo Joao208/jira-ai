@@ -17,7 +17,7 @@ export const editDescription = async ({ issueKey, description, issueId }) => {
     if (response.status === 204) {
       const storageKey = "generatedDescription" + issueKey + issueId;
 
-      await storage.delete(storageKey + issueKey);
+      await storage.set(storageKey, "Descrição limpa");
 
       return {
         ok: true,
