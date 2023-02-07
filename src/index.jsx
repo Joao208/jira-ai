@@ -89,7 +89,7 @@ const App = () => {
   return (
     <Fragment>
       {message ? (
-        <SectionMessage title="Notion AI Info" appearance="info">
+        <SectionMessage title="JIRA AI Info" appearance="info">
           <Text>{message}</Text>
         </SectionMessage>
       ) : null}
