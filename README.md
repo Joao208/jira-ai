@@ -1,5 +1,7 @@
 # Jira AI
 
+https://user-images.githubusercontent.com/59159025/217343115-2dbf1f35-11b9-46ff-bf18-eec7b9153b8c.mp4
+
 O Jira AI é um aplicativo que utiliza o modelo de linguagem ChatGPT para gerar descrições de tarefas de maneira automática no Jira.
 
 ## Tecnologias utilizadas
