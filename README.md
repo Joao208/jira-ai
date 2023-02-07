@@ -12,9 +12,17 @@ React
 Para instalar o Jira AI, você precisa seguir os seguintes passos:
 
 1. Clone este repositório
-2. Instale as dependências executando npm install
-3. Configure as credenciais de acesso à API do Jira
-4. Inicie a aplicação com npm start
+2. Instale as dependências executando `npm install`
+3. Configure as credenciais de acesso à API do Jira ([Tutorial](https://developer.atlassian.com/platform/forge/getting-started/))
+4. Exporte as envs
+
+```bash
+export FORGE_USER_VAR_OPEN_AI_URL=https://api.openai.com/v1
+export FORGE_USER_VAR_OPEN_AI_KEY=
+```
+
+5. Inicie a aplicação com `npm start`
+
 
 ## Uso
 
