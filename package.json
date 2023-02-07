@@ -1,0 +1,21 @@
+{
+  "name": "jira-ai",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "forge tunnel",
+    "deploy": "forge deploy",
+    "install": "forge install",
+    "lint": "./node_modules/.bin/eslint src/**/* || npm run --silent hook-errors",
+    "hook-errors": "echo '\\x1b[31mThe build failed because a Forge UI hook is being used incorrectly. Forge UI hooks follow the same rules as React Hooks but have their own API definitions. See the Forge documentation for details on how to use Forge UI hooks.\n' && exit 1"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-plugin-react-hooks": "^4.2.0"
+  },
+  "dependencies": {
+    "@forge/api": "^2.10.0",
+    "@forge/ui": "1.6.0",
+    "react": "^18.2.0"
+  }
+}
