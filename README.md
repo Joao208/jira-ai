@@ -32,15 +32,21 @@ forge create
 ```bash
 cat <your_app_name>/manifest.yml > jira-ai/manifest.yml
 ```
+7. Create the envs in atlassian:
 
-7. Export envs
+```bash
+forge variables set OPEN_AI_URL https://api.openai.com/v1
+forge variables set OPEN_AI_KEY <YOUR KEY>
+```
+
+8. Export envs
 
 ```bash
 export FORGE_USER_VAR_OPEN_AI_URL=https://api.openai.com/v1
 export FORGE_USER_VAR_OPEN_AI_KEY=<YOUR KEY>
 ```
 
-8. Deploy the application by running
+9. Deploy the application by running
 
 ```bash
 npm run deploy
@@ -50,7 +56,7 @@ forge install
 # Choose JIRA and put in your account URL
 ```
 
-9. You are now ready to use.
+10. You are now ready to use.
 
 ## Usage
 
